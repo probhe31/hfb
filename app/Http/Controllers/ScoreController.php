@@ -100,7 +100,7 @@ class ScoreController extends Controller
 
     public function getBestScore()
     {
-        $user = Score::query()->orderBy("score")->take(1)->get();
+        $user = Score::query()->orderBy("score", "desc")->take(1)->get();
 
 
         return response()->json([
