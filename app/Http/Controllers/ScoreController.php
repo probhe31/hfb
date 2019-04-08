@@ -47,9 +47,9 @@ class ScoreController extends Controller
 
         ]);
         
-        $score->save();
+        $res = $score->save();
         return response()->json([
-            'result' => 'OK'
+            'result' => $res
         ]); 
     }
 
